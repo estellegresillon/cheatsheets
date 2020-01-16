@@ -1,21 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import './App.css';
+import Masonry from "./components/masonry";
 import { css } from "./gists/css";
-import Snippet from "./components/snippet";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">Front-End Cheatsheets</header>
-
-      <section>
-        {css.map(snippet => {
-          return (
-            <Snippet snippet={snippet} language="css" key={snippet.name} />
-          );
-        })}
-      </section>
+      <Masonry language="css" snippets={css} />
+      <Masonry language="react" snippets={css} />
     </div>
   );
 }
