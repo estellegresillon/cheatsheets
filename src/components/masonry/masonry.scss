@@ -32,3 +32,19 @@
     column-count: 2;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .masonry {
+    column-count: 2;
+
+    &.react-masonry {
+      column-count: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .masonry {
+    column-count: 1;
+  }
+}
